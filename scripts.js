@@ -4,7 +4,10 @@
 
 const LETTERS = `AÁBDÐEÉFGHIÍJKLMNOÓPRSTUÚVXYÝÞÆÖ`;
 
+
+
 /**
+ *
  * Byrja forrit.
  */
 function start() {
