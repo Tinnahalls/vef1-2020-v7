@@ -1,0 +1,73 @@
+
+function getPromptFromUser() {
+  let code = prompt("Hvort viltu kóða eða afkóða streng?,");
+
+   if (code !== "kóða" || code !== "afkóða"){
+    alert("Veit ekki hvaða aðgerð er. Reyndu aftur,");
+    getPromptFromUser();
+   }
+
+    else if(code === "kóða"){
+    getDecode();
+    }
+
+    else {
+    getEncode();
+    }
+
+
+    function Encode() {
+      let number = Number(prompt("Hversu mikið á að hliðra streng? Gefðu upp heiltölu á bilinu, 1 - 31"));
+
+      if(number > 1 && number < 31) {
+      return;
+
+      }
+      else
+        alert("Veit ekki hvaða aðgerð er. Reyndu aftur.");
+        getEncode();
+    }
+
+
+
+
+
+
+
+
+
+    var str = prompt("Enter a string to shift");
+    var n = parseInt(prompt("Enter a ciper (must be an integer)"));
+
+
+  function encode(str, n) {
+    var upperCaseLetter = str.toLocaleUpperCase[i]
+
+    const LETTERS = `AÁBDÐEÉFGHIÍJKLMNOÓPRSTUÚVXYÝÞÆÖ`.split('');
+    var newString = '';
+
+        for(var i=0; i < upperCaseLetter.length; i++)
+        var currentLetter = upperCaseLetter[i];
+
+            if(currentLetter === '') {
+               newString += currentLetter;
+                 continue;
+              }
+
+  const currentIndex = LETTERS.indexOf(currentLetter);
+  let newIndex = currentIndex + n;
+
+
+  if (newIndex > 33) newIndex = newIndex - 34;
+  if (newIndex < 0) newIndex = newIndex + 34;
+
+  if (str[i] === str[i].toUpperCase()) {
+    newString += LETTERS[newIndex].toUpperCase();
+  }
+  else newString += LETTERS[newIndex];{
+  }
+  return newString;
+  }
+
+
+  console.assert(encode('A', 3) === 'D', 'kóðun á A með n=3 er D');
